@@ -137,11 +137,17 @@
 
 
 ;; Major mode bindings (just names, really)
+(defun felipe/indent-buffer ()
+  (interactive)
+  (save-excursion
+    (indent-region (point-min) (point-max) nil)))
+
 (felipe/leader-def
   :keymaps 'normal
   "m" '(nil :which-key "major mode")
-  "mr" '(nil :which-key "run/refactor")
-  "mf" '(nil :which-key "format")
+  "mr" '(nil :which-key "refactor")
+  "mR" '(nil :which-key "quickrun")
+  "mf" '(felipe/indent-buffer :which-key "format")
   "mg" '(nil :which-key "go"))
 
 (provide 'core-keybindings)
