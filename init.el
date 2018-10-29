@@ -20,6 +20,7 @@
 (require 'layer-zeal)
 (require 'layer-writeroom)
 (require 'layer-restart)
+;; (require 'layer-dashboard)
 
 ;; Languages
 (require 'layer-c-c++)
