@@ -9,8 +9,8 @@
 ;; Key bindings
 (felipe/leader-def
   :keymaps 'normal
-  "a" '(projectile-find-other-file)
-  "A" '(projectile-find-other-file-other-window)
+  "a" 'projectile-find-other-file
+  "A" 'projectile-find-other-file-other-window
 
   "pa" 'projectile-add-known-project)
 
