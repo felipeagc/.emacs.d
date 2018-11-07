@@ -1,20 +1,21 @@
 (require 'layer-lsp)
 
+
+(defun felipe/cquery-hook ()
+  (when (or (eq major-mode 'c-mode)
+            (eq major-mode 'c++-mode))
+    (lsp-cquery-enable)))
+
 ;; Cquery
 (use-package cquery
+  :hook ((c-mode . felipe/cquery-hook)
+         (c++-mode . felipe/cquery-hook))
   :init
   (setq cquery-executable "/usr/bin/cquery"
         ;; cquery-extra-args '("--log-file=/tmp/cq.log")
         ;; cquery-sem-highlight-method 'font-lock
         ;; cquery-extra-init-params '(:completion (:detailedLabel t))
-        )
-  :config
-  (defun felipe/cquery-hook ()
-    (when (or (eq major-mode 'c-mode)
-              (eq major-mode 'c++-mode))
-      (lsp-cquery-enable)))
-
-  (add-hook 'c-mode-common-hook 'felipe/cquery-hook))
+        ))
 
 
 ;; CMake

@@ -1,12 +1,13 @@
 ;; Go mode
 (use-package go-mode
+  :mode (("\\.go\\'" . go-mode))
   :config
   (use-package go-eldoc
     :config
-    (add-hook 'go-mode-hook 'go-eldoc-setup)))
+    (add-hook 'go-mode-hook 'go-eldoc-setup))
 
-(use-package company-go
-  :after company)
+  (use-package company-go
+    :after company))
 
 
 ;; Key bindings

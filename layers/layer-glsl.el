@@ -1,5 +1,6 @@
 ;; GLSL mode
 (use-package glsl-mode
+  :defer t
   :config
   (autoload 'glsl-mode "glsl-mode" nil t)
   (add-to-list 'auto-mode-alist '("\\.glsl\\'" . glsl-mode))

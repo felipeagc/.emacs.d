@@ -1,8 +1,9 @@
-(use-package clojure-mode)
-
-(use-package cider
-  :init
-  (setq nrepl-hide-special-buffers t))
+(use-package clojure-mode
+  :mode (("\\.clj\\'" . clojure-mode))
+  :config
+  (use-package cider
+    :init
+    (setq nrepl-hide-special-buffers t)))
 
 
 ;; Key bindings

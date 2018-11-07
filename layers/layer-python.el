@@ -1,7 +1,7 @@
 (require 'layer-lsp)
 
-;; LSP
 (use-package lsp-python
+  ;; :mode (("\\.py\\'" . python-mode))
   :after lsp-mode
   :config
   (add-hook 'python-mode-hook #'lsp-python-enable))
