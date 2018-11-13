@@ -6,7 +6,7 @@
 (use-package lsp-mode
   :after flycheck
   :init
-  (setq lsp-highlight-symbol-at-point nil)
+  (setq lsp-eldoc-hook '(lsp-hover))
   :config
   (use-package lsp-ui
     :init
