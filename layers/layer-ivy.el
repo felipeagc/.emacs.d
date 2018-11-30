@@ -12,7 +12,7 @@
   :after ivy
   :init
   (setenv "FZF_DEFAULT_COMMAND"
-          "rg --files --follow --glob \"!thirdparty/*\"")
+          "rg --files --follow")
   (setq counsel-find-file-ignore-regexp
         (concat
          ;; File names beginning with # or .
