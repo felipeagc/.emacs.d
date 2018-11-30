@@ -6,7 +6,7 @@
 ;; Key bindings
 (felipe/leader-def
   :keymaps 'normal
-  "mR" 'quickrun)
+  "mq" 'quickrun)
 
 
 (provide 'layer-quickrun)
