@@ -36,4 +36,5 @@
 (require 'layer-rust)
 (require 'layer-web)
 (require 'layer-yaml)
+(require 'layer-zig)
 
