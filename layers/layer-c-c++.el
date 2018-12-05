@@ -35,12 +35,25 @@
 (add-hook 'c-mode-common-hook 'felipe/c-indent-hook)
 
 
+;; Formatting
+(use-package clang-format)
+
+
+;; Bison / Flex
+(use-package bison-mode
+  :straight (:host github :repo "felipeagc/bison-mode")
+  :init
+  (setq bison-rule-separator-column 2
+        bison-rule-enumeration-column 4
+        bison-all-electricity-off t))
+
+
 ;; Key bindings
 (felipe/leader-def 'normal c-mode-map
-  "mf" 'lsp-format-buffer
+  "mf" 'clang-format-buffer
   "mr" 'lsp-rename)
 (felipe/leader-def 'normal c++-mode-map
-  "mf" 'lsp-format-buffer
+  "mf" 'clang-format-buffer
   "mr" 'lsp-rename)
 
 (general-def 'normal c-mode-map
