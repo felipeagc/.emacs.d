@@ -4,11 +4,14 @@
 
 ;; LSP mode
 (use-package lsp-mode
+  :commands lsp
   :after flycheck
   :init
-  (setq lsp-eldoc-hook '(lsp-hover))
+  (setq lsp-eldoc-hook '(lsp-hover)
+        lsp-prefer-flymake nil)
   :config
   (use-package lsp-ui
+    :commands lsp-ui-mode
     :init
     (setq lsp-ui-sideline-enable nil
           lsp-ui-doc-include-signature nil
@@ -16,6 +19,7 @@
     :config
     (add-hook 'lsp-mode-hook 'lsp-ui-mode))
   (use-package company-lsp
+    :commands company-lsp
     :after company
     :init
     (setq company-lsp-async t

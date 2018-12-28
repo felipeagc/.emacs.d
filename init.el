@@ -37,4 +37,5 @@
 (require 'layer-web)
 (require 'layer-yaml)
 (require 'layer-zig)
+(require 'layer-scene)
 
