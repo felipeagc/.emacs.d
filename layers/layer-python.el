@@ -1,11 +1,5 @@
 (require 'layer-lsp)
 
-(use-package lsp-python
-  ;; :mode (("\\.py\\'" . python-mode))
-  :after lsp-mode
-  :config
-  (add-hook 'python-mode-hook #'lsp-python-enable))
-
 
 ;; Key bindings
 (felipe/leader-def 'normal python-mode-map

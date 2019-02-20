@@ -14,6 +14,7 @@
 (require 'layer-flycheck)
 (require 'layer-company)
 (require 'layer-lsp)
+(require 'layer-dap)
 (require 'layer-org)
 (require 'layer-dumb-jump)
 (require 'layer-editorconfig)
@@ -21,7 +22,6 @@
 (require 'layer-writeroom)
 (require 'layer-restart)
 (require 'layer-quickrun)
-;; (require 'layer-dashboard)
 
 ;; Languages
 (require 'layer-c-c++)
@@ -37,5 +37,6 @@
 (require 'layer-web)
 (require 'layer-yaml)
 (require 'layer-zig)
-(require 'layer-scene)
+(require 'layer-java)
+(require 'layer-julia)
 

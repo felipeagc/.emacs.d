@@ -9,5 +9,6 @@
 (require 'core-theme)
 (require 'core-modeline)
 (require 'core-font)
+(require 'core-misc)
 
 (provide 'core)

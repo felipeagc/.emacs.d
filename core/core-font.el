@@ -1,7 +1,7 @@
-(setq felipe/default-font-size-pt 12
+(setq felipe/default-font-size-pt 11
       felipe/font-size-pt felipe/default-font-size-pt)
 
-(add-to-list 'default-frame-alist '(font . "-CYEL-Iosevka-semibold-normal-normal-*-16-*-*-*-d-0-iso10646-1"))
+(add-to-list 'default-frame-alist '(font . "Iosevka-11"))
 
 (defun felipe/font-size-adj (&optional arg)
   (interactive "p")

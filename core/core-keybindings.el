@@ -30,7 +30,23 @@
 (felipe/leader-def
   :keymaps 'normal
   "t" '(nil :which-key "theme/toggles")
-  "tt" '(nil :which-key "themes"))
+  "tt" '(nil :which-key "themes")
+  "tc" '((lambda ()
+           (interactive)
+           (save-excursion
+             (let* ((bounds (bounds-of-thing-at-point 'symbol))
+                    (start (car bounds))
+                    (end (cdr bounds))
+                    (currently-using-underscores-p (progn (goto-char start)
+                                                          (re-search-forward "_" end t))))
+               (if currently-using-underscores-p
+                   (progn
+                     (upcase-initials-region start end)
+                     (replace-string "_" "" nil start end)
+                     (downcase-region start (1+ start)))
+                 (replace-regexp "\\([A-Z]\\)" "_\\1" nil (1+ start) end)
+                 (downcase-region start (cdr (bounds-of-thing-at-point 'symbol)))))))
+         :which-key "toggle word case"))
 
 
 ;; Files

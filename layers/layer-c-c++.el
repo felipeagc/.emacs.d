@@ -52,6 +52,15 @@
   "mf" 'clang-format-buffer
   "mr" 'lsp-rename)
 
+(felipe/leader-def 'normal c++-mode-map
+  "dd" 'gud-gdb
+  "db" 'gud-break
+  "dr" 'gud-remove
+  "dn" 'gud-next
+  "ds" 'gud-step
+  "dp" 'gud-print
+  "dR" 'gud-run)
+
 (general-def 'normal c-mode-map
   "gd" 'lsp-ui-peek-find-definitions)
 (general-def 'normal c++-mode-map
